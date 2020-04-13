@@ -4,9 +4,8 @@ When you cannot use Query Store but you still would like to collect query statis
 To install, follow the instructions in installer.sql. 
 
 # Usage
-select * 
-from [dbo].[get_procedure_statistics](<begin time>, <end time>, <SQL handle>, <Plan Handle>)
-
+select * from [dbo].[get_procedure_statistics](begin time, end time, SQL handle, Plan Handle)
+select * from [dbo].[get_query_statistics](begin time, end time, SQL handle, Plan Handle)
 
 # Usage examples
 Running with default parameters a list of every recorded query or procedure is shown for the last 24 Hours.
@@ -14,8 +13,7 @@ Running with default parameters a list of every recorded query or procedure is s
 select * 
 from [dbo].[get_procedure_statistics](NULL, NULL, NULL, NULL)
 
-select * 
-from [dbo].[get_query_statistics](NULL, NULL, NULL, NULL)
+select * from [dbo].[get_query_statistics](NULL, NULL, NULL, NULL)
 
 Filtering for a time period:
 
