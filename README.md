@@ -5,6 +5,7 @@ To install, follow the instructions in installer.sql.
 
 # Usage
 select * from [dbo].[get_procedure_statistics](begin time, end time, SQL handle, Plan Handle)
+
 select * from [dbo].[get_query_statistics](begin time, end time, SQL handle, Plan Handle)
 
 # Usage examples
